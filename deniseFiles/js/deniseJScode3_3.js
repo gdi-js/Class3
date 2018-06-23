@@ -146,17 +146,17 @@ function  myObject2(){
 		'In 1-quart saucepan, melt chocolate chips and shortening over low heat, stirring frequently. Remove from heat.',
 		'Dip lower half of each strawberry into chocolate mixture; allow excess to drip back into saucepan. Place on waxed paper-lined tray or cookie sheet.',
 		'Refrigerate uncovered about 30 minutes or until chocolate is firm, or until ready to serve. Store covered in refrigerator so chocolate does not soften (if made with oil, chocolate will soften more quickly at room temperature).'],
-		talk: function() {
+		greeting: function() {
 			console.log('Hello!');
 		  },
-		eat: function(food) {
+		prepare: function(food) {
 			console.log("I'm hungry! Let's cook.. " + food);
 		  }
 		};
-		recipe.talk();
+		recipe.greeting();
 		
 	var title = recipe.recipeTitle;
-	recipe.eat(title);
+	recipe.prepare(title);
 
 	console.log('INGREDIENTS');
 	for (item in recipe.servings) {
