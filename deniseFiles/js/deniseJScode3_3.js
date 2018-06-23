@@ -47,7 +47,7 @@ function objectEX(){
 
 /*	
 	######################################################
-	Let’s Develop It 3.3
+	Let’s Develop It 3.3a
 	Create an object to hold information on your favorite 
 	recipe. It should have properties for:
 		recipeTitle (a string)
@@ -84,13 +84,6 @@ function  myObject(){
 	for (item in recipe.servings) {
 		console.log(recipe.servings[item] + " " + recipe.ingredients[item] + "\n");
 	}
-	
-	var newString = ' ';
-	for(var i = 0; i < recipe.servings && recipe.ingredients ; i++){
-		newString.concat(recipe.servings[i] + " " + recipe.ingredients[i] + "\n");
-	}
-	document.getElementById('ingredients').innerHTML = recipe.servings + " " +recipe.ingredients.toString();
-
 
 	console.log('STEPS');
 	for(var i=0; i < recipe.directions.length; i++){
@@ -98,15 +91,10 @@ function  myObject(){
 		var directions = recipe.directions[i];
 		console.log(counter + '. ' +directions);
 	}
-	
-	var newString2 = ' ';
-	for(var i = 0; i < recipe.directions ; i++){
-		newString2.concat(recipe.directions[i] + '<br>');
-	}
-	document.getElementById('steps').innerHTML = recipe.directions.toString();
-	//document.getElementById("steps").innerHTML=(counter + '. ' +directions);
+
+
 }
-myObject();
+//myObject();
 
 //Example of printing an object 
 function myObject2(){
@@ -124,3 +112,81 @@ function myObject2(){
 	}
 }
 //myObject2();
+
+function letCook(){
+	var denise = {
+		age: 25,
+		hairColor: 'Brown',
+		talk: function() {
+		  console.log('Hello!');
+		},
+		eat: function(food) {
+		  console.log("I'm hungry! Let's cook.. " + food);
+		}
+	  };
+	  denise.talk();
+	  denise.eat('pizza');
+}
+//letCook();
+/*	
+	######################################################
+	Let’s Develop It 3.3b
+	Go back to your recipe object. Add a function called 
+	letsCook that says "I'm hungry! Let's cook..." with 
+	the name of your recipe title.
+	#######################################################
+*/	
+
+function  myObject2(){
+	var recipe= {
+		recipeTitle: 'Chocolate-Dipped Strawberries',
+		servings: ['2','1/2','1'],
+		ingredients: ['cups strawberries', 'cup chocolate chips', 'teaspoon vegetable oil'],
+		directions: ['Gently rinse strawberries and dry on paper towels (berries must be completely dry). Line cookie sheet with waxed paper.',
+		'In 1-quart saucepan, melt chocolate chips and shortening over low heat, stirring frequently. Remove from heat.',
+		'Dip lower half of each strawberry into chocolate mixture; allow excess to drip back into saucepan. Place on waxed paper-lined tray or cookie sheet.',
+		'Refrigerate uncovered about 30 minutes or until chocolate is firm, or until ready to serve. Store covered in refrigerator so chocolate does not soften (if made with oil, chocolate will soften more quickly at room temperature).'],
+		talk: function() {
+			console.log('Hello!');
+		  },
+		eat: function(food) {
+			console.log("I'm hungry! Let's cook.. " + food);
+		  }
+		};
+		recipe.talk();
+		
+	var title = recipe.recipeTitle;
+	recipe.eat(title);
+
+	console.log('INGREDIENTS');
+	for (item in recipe.servings) {
+		console.log(recipe.servings[item] + " " + recipe.ingredients[item] + "\n");
+	}
+
+	console.log('STEPS');
+	for(var i=0; i < recipe.directions.length; i++){
+		var counter = i+1;
+		var directions = recipe.directions[i];
+		console.log(counter + '. ' +directions);
+	}
+}
+myObject2();
+
+
+
+
+/*	
+	var newString = ' ';
+	for(var i = 0; i < recipe.servings && recipe.ingredients ; i++){
+		newString.concat(recipe.servings[i] + " " + recipe.ingredients[i] + "\n");
+	}
+	document.getElementById('ingredients').innerHTML = recipe.servings + " " +recipe.ingredients.toString();
+
+	
+	var newString2 = ' ';
+	for(var i = 0; i < recipe.directions ; i++){
+		newString2.concat(recipe.directions[i] + '<br>');
+	}
+	document.getElementById('steps').innerHTML = recipe.directions.toString();
+	//document.getElementById("steps").innerHTML=(counter + '. ' +directions);
+	*/
