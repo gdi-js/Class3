@@ -19,27 +19,38 @@ var lotteryNumbers = [33, 72, 64, 18, 17, 85];
 var myFavoriteThings = ['Cats', 6, 'Coding'];
 
 function arrayEX(){
+	console.log('Returns the length of rainbowColors Array');
 	console.log(rainbowColors.length);		//Console example
+	console.log('Returns the length of lotteryNumbers Array');
+	console.log(lotteryNumbers.length);
+
 	document.getElementById('p1').innerHTML = (rainbowColors.length);  //Prints to HTML
 
 	//Access an array item
 	var firstColor = rainbowColors[0];
-	var lastColor  = rainbowColors[6];
+	console.log('First value in rainbowColors Array');
 	console.log(firstColor);
-	console.log(lastColor);
-	document.getElementById('p2').innerHTML = (firstColor);  //Prints to HTML
-	document.getElementById('p3').innerHTML = (lastColor);  //Prints to HTML
 
-	//console.log(lotteryNumbers.length);
+	var lastColor  = rainbowColors[6];
+	console.log('Last value in rainbowColors Array');
+	console.log(lastColor);
+	
+	//document.getElementById('p2').innerHTML = (firstColor);  //Prints to HTML
+	//document.getElementById('p3').innerHTML = (lastColor);  //Prints to HTML
 
 	document.getElementById('p4').innerHTML = (myFavoriteThings[0]);  //Prints to HTML
 	myFavoriteThings[0] = 'Kittens'; //Changing value in array
-	console.log(myFavoriteThings[0]);
-	document.getElementById('p5').innerHTML = (myFavoriteThings[0]);  //Prints to HTML
+	//console.log(myFavoriteThings[0]);
+	document.getElementById('p4').innerHTML = (myFavoriteThings[0]);  //Prints to HTML
 
-	myFavoriteThings.push('Javascript');
-	console.log(myFavoriteThings[3]);
-	document.getElementById('p6').innerHTML = (myFavoriteThings[3]);  //Prints to HTML
+	//Prints array before pushing a new item
+	console.log(myFavoriteThings);
+	myFavoriteThings.push('Javascript');	
+	//Prints array after pushing a new item
+	console.log(myFavoriteThings);
+
+	//console.log(myFavoriteThings[3]);
+	//document.getElementById('p6').innerHTML = (myFavoriteThings[3]);  //Prints to HTML
 
 }
 //arrayEX();
@@ -57,7 +68,7 @@ function favoriteFoods(){
 	console.log(favFoods[2]);
 	document.getElementById('p7').innerHTML = (favFoods[0]);  //Prints to HTML
 	document.getElementById('p8').innerHTML = (favFoods[1]);  //Prints to HTML
-	document.getElementById('p9').innerHTML = (favFoods[2]);  //Prints to HTML
+	document.getElementById('p9').innerHTML = (favFoods);  //Prints to HTML
 }
 //favoriteFoods();
 
@@ -68,8 +79,15 @@ function favoriteFoods(){
 	#######################################################
 */
 function printAllinArray(){
+	console.log(rainbowColors);
 	for(var i=0; i < rainbowColors.length; i++){
-		console.log(rainbowColors[i]);
+		if(rainbowColors[i] === 'Orange'){
+			console.log('I found the color!');
+			break;
+		}
+		else{
+			console.log('This is not found');
+		}
 	}
 }
 //printAllinArray();
@@ -80,9 +98,9 @@ function printAllinArray(){
 	######################################################
 */
 function printFavoriteFoods(){
-	var favFoods = ['Bannans', 'Apples', 'Strawberries'];
+	var favFoods = ['Bananans', 'Apples', 'Strawberries'];
 	for(var i=0; i < favFoods.length; i++){
 		document.getElementById('p10').innerHTML += (favFoods[i]+ '<br>');  //Prints to HTML
 	}
 }
-//printFavoriteFoods();
+printFavoriteFoods();

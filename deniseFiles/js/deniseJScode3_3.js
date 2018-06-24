@@ -23,11 +23,12 @@ function objectEX(){
 		birthday: {month: 9, day: 12}
 	  };
 	  
-	  //Accessing Objects 
+	  //Accessing Objects with dot notation
 	  var usersHometown = user.hometown;
 	  console.log(usersHometown);
 	  document.getElementById("p1").innerHTML=(usersHometown);
 	  
+	  //Accessing Objects with bracket notation
 	  var usersHair = user['hair'];
 	  console.log(usersHair);
 	  document.getElementById("p2").innerHTML=(usersHair);
@@ -69,20 +70,21 @@ function  myObject(){
 		'Dip lower half of each strawberry into chocolate mixture; allow excess to drip back into saucepan. Place on waxed paper-lined tray or cookie sheet.',
 		'Refrigerate uncovered about 30 minutes or until chocolate is firm, or until ready to serve. Store covered in refrigerator so chocolate does not soften (if made with oil, chocolate will soften more quickly at room temperature).']
 	};
+
 	var title = recipe.recipeTitle;
 	console.log(title);
-	document.getElementById("title").innerHTML=('Recipe Title: ' +title);
+	// /document.getElementById("title").innerHTML=('Recipe Title: ' +title);
 
-	console.log('INGREDIENTS');
-	//var item1 = recipe.servings[0] + ' ' +recipe.ingredients[0];
+	//console.log('INGREDIENTS');
+	var item1 = recipe.servings[0] + ' ' +recipe.ingredients[0];
 	//var item2 = recipe.servings[1] + ' ' +recipe.ingredients[1];
 	//var item3 = recipe.servings[2] + ' ' +recipe.ingredients[2];
 	//console.log(item1);
 	//console.log(item2);
 	//console.log(item3);
 
-	for (item in recipe.servings) {
-		console.log(recipe.servings[item] + " " + recipe.ingredients[item] + "\n");
+	for (each in recipe.servings) {
+		console.log(recipe.servings[each] + " " + recipe.ingredients[each] + "\n");
 	}
 
 	console.log('STEPS');
@@ -91,8 +93,6 @@ function  myObject(){
 		var directions = recipe.directions[i];
 		console.log(counter + '. ' +directions);
 	}
-
-
 }
 //myObject();
 
@@ -170,7 +170,7 @@ function  myObject2(){
 		console.log(counter + '. ' +directions);
 	}
 }
-myObject2();
+//myObject2();
 
 
 

@@ -1,9 +1,9 @@
- /*
-    #######################################################
-    FILENAME: deniseJScode3_1.js
-    OVERVIEW: GDI JS Class 3: Loops
-    PURPOSE: Different Let's Develop It Solutions
-    #######################################################
+/*
+   #######################################################
+   FILENAME: deniseJScode3_1.js
+   OVERVIEW: GDI JS Class 3: Loops
+   PURPOSE: Different Let's Develop It Solutions
+   #######################################################
 */
 
 /*	WHILE LOOPS
@@ -17,8 +17,8 @@ function whileLoopEX() {
 	var bottlesOfBeer = 50;
 	console.log('This is an example of a while loop');
 	while (bottlesOfBeer > 0) {
-	  console.log(bottlesOfBeer + ' bottles of beer on the wall');
-	  bottlesOfBeer = bottlesOfBeer - 1;
+		console.log(bottlesOfBeer + ' bottles of beer on the wall');
+		bottlesOfBeer = bottlesOfBeer - 1;
 	}
 	console.log('\n');	//Breakline
 }
@@ -27,13 +27,13 @@ function whileLoopEX() {
 //PRINTING WHILE LOOP TO HTML PAGE
 function whileLoopEX2() {
 	var bottlesOfBeer = 50;
-	document.getElementById("p1").innerHTML=('This is an example of a while loop');
+	document.getElementById("p1").innerHTML = ('This is an example of a while loop');
 	while (bottlesOfBeer > 0) {
-	  document.getElementById("p2").innerHTML += (bottlesOfBeer+ ',\n');
-	  bottlesOfBeer = bottlesOfBeer - 1;
+		document.getElementById("p2").innerHTML += (bottlesOfBeer + ',\n');
+		bottlesOfBeer = bottlesOfBeer - 1;
 	}
 }
-//whileLoopEX2();
+whileLoopEX2();
 
 /*	FOR LOOPS
 	######################################################
@@ -42,7 +42,7 @@ function whileLoopEX2() {
 	#######################################################
 */
 // Console example of for loop will count 1 to 10
-function forLooopEX(){
+function forLooopEX() {
 	console.log('This is an example of a for loop');
 	for (var i = 1; i <= 10; i++) {
 		console.log(i);
@@ -52,11 +52,11 @@ function forLooopEX(){
 //forLooopEX();
 
 //PRINTING FOR LOOP TO HTML PAGE
-function forLooopEX2(){
-	document.getElementById("p3").innerHTML=('This is an example of a for loop');
+function forLooopEX2() {
+	document.getElementById("p3").innerHTML = ('This is an example of a for loop');
 	for (var i = 1; i <= 10; i++) {
 		console.log(i);
-		document.getElementById("p4").innerHTML += (i+ ',\n');
+		document.getElementById("p4").innerHTML += (i + ',\n');
 	}
 }
 //forLooopEX2();
@@ -68,22 +68,24 @@ function forLooopEX2(){
 	inside the loops.
 	#######################################################
 */
-function forLoopsLogic(){
+function forLoopsLogic() {
 	console.log('Count from 1 to 100');
-	for (var i = 1; i <= 100; i++) {
+	for (var i = 1; i <= 50; i++) {
 		if (i % 3 === 0) {
-		// Says 'Fizz' after multiples of three
-		console.log(' Fizz');
+			// Says 'Fizz' after multiples of three
+			console.log(' Fizz');
 		} else if (i % 5 === 0) {
-		// Says 'Buzz' after multiples of five
-		console.log(' Buzz');
+			// Says 'Buzz' after multiples of five
+			console.log(' Buzz');
 		} else {
-		console.log(i);
+			console.log(i);
 		}
 	}
 	console.log('\n'); //Breakline
 }
 //forLoopsLogic();
+
+
 
 /*	BREAK
 	######################################################
@@ -93,22 +95,22 @@ function forLoopsLogic(){
 	#######################################################
 */
 // Console example of for loop break
-function breakLoop1(){
+function breakLoop1() {
 	for (let current = 20; ; current = current + 1) {
 		if (current % 7 == 0) {
-		console.log(current);
-		break;
+			console.log(current);
+			break;
 		}
 	}		// → 21
 }
-//breakLoop1();
+breakLoop1();
 
 //PRINTING break TO HTML PAGE
-function breakLoop2(){
+function breakLoop2() {
 	for (let current = 20; ; current = current + 1) {
 		if (current % 7 == 0) {
-		document.getElementById("p5").innerHTML = (current+ '\n');
-		break;
+			document.getElementById("p5").innerHTML = (current + '\n');
+			break;
 		}
 	}		// → 21
 }
@@ -121,14 +123,14 @@ function breakLoop2(){
 	for the first number % 7 
 	#######################################################
 */
-function breakLoop3(){
+function breakLoop3() {
 	console.log('Count from 100 to 200')
 	for (var i = 100; i <= 200; i++) {
 		console.log('Testing ' + i);
 		//Stop at the first multiple of 7
 		if (i % 7 == 0) {
-		console.log('Found it! ' + i);
-		break;
+			console.log('Found it! ' + i);
+			break;
 		}
 	}
 }
@@ -144,31 +146,32 @@ function breakLoop3(){
 	#######################################################
 */
 //Console example
-function multiplyLoop1(){
+function multiplyLoop1() {
 	var number1 = 9;
-	for(var i = 1; i <= 12; i++ ){
+	for (var i = 1; i <= 12; i++) {
 		var mult1 = number1 * i;
-		console.log(+number1+ ' * ' +i+ '='  + mult1);
+		console.log(number1 + ' * ' + i + '=' + mult1);
 	}
 }
 //multiplyLoop1();
 
 //Prints to HTML page
-function multiplyLoopPrint(){
+function multiplyLoopPrint() {
 	var number1 = 9;
-	for(var i = 1; i <= 12; i++ ){
+	for (var i = 1; i <= 12; i++) {
 		var mult1 = number1 * i;
-		document.getElementById("nine").innerHTML += (+number1+ ' * ' +i+ '='  + mult1+ "<br>");
+		document.getElementById("nine").innerHTML += (+number1 + ' * ' + i + '=' + mult1 + "<br>");
 	}
 }
 //multiplyLoopPrint();
 
 //loop inside a loop to write all the times tables, from 1 to 12.
-function multiplyLoop2(){
-	for (var multiplier = 0; multiplier <= 12; multiplier++) {
-		for (var i = 0; i <= 12; i++) {
-		var result = multiplier * i;
-		console.log(multiplier + ' * ' + i + ' = ' + result);
+function multiplyLoop2() {
+	for (var multiplier = 1; multiplier <= 12; multiplier++) {
+		console.log('Times Table for ' + multiplier);
+		for (var i = 5; i <= 12; i++) {
+			var result = multiplier * i;
+			console.log(multiplier + ' * ' + i + ' = ' + result);
 		}
 	}
 }

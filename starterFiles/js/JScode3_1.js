@@ -23,9 +23,11 @@ function whileLoopEX() {
 	}
 	console.log('\n');	//Breakline
 }
+whileLoopEX();
 
 //FILL OUT: PRINTING WHILE LOOP TO HTML PAGE
 function whileLoopEX2() {
+	
 
 }
 
