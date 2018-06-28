@@ -1,52 +1,3 @@
- /*
-    #######################################################
-    FILENAME: deniseJScode3_3.js
-    OVERVIEW: GDI JS Class 3: Objects
-    PURPOSE: Different Let's Develop It outline for students
-    #######################################################
-*/
-
-/*	
-	######################################################
-	Objects let us store a collection of properties.
-	var objectName = {
-		propertyName: propertyValue,
-		propertyName: propertyValue
-	};
-	#######################################################
-*/
-function objectEX(){
-	//FILL OUT THE USER OBJECT
-	var user = {
-		hometown: '',
-		hair: '',
-		likes: ['', ''],
-		birthday: {month: , day: }
-	  };
-	  
-	  //Accessing Objects 
-	  var usersHometown = user.hometown;
-	  console.log(usersHometown);
-	  //FILL OUT: PRINT usersHometown TO THE HTML PAGE
-	  
-	  //FILL OUT: ACESS THE hair object
-	  var usersHair = ;
-	  //FILL OUT: CONSOLE PRINT AND PRINT TO THE HTML 
-
-	  //Accessing an object that contains another object insdie it
-	  var userBirthday = user.birthday.month + "/" + user.birthday.day;
-	  console.log(userBirthday);
-	  //FILL OUT: P TAG TO PRINT TO HTML PAGE
-	  document.getElementById("").innerHTML=(userBirthday);
-
-	  //Add new properties
-	  user.married = ;
-	  var usersStatus = user.married;
-	  console.log(usersStatus);
-	  //FILL OUT: TEXT TO PRINT AND usersStatus
-	  document.getElementById("p4").innerHTML=();
-}
-
 /*	
 	######################################################
 					Let’s Develop It 3.3
@@ -61,21 +12,55 @@ function objectEX(){
 	#######################################################
 */
 
-function  myObject(){
 
+function myObject() {
+	var recipe = {
+		recipeTitle: 'Chocolate-Dipped Strawberries',
+		servings: ['2', '1/2', '1'],
+		ingredients: ['cups strawberries', 'cup chocolate chips', 'teaspoon vegetable oil'],
+		directions: ['Gently rinse strawberries and dry on paper towels (berries must be completely dry). Line cookie sheet with waxed paper.',
+			'In 1-quart saucepan, melt chocolate chips and shortening over low heat, stirring frequently. Remove from heat.',
+			'Dip lower half of each strawberry into chocolate mixture; allow excess to drip back into saucepan. Place on waxed paper-lined tray or cookie sheet.',
+			'Refrigerate uncovered about 30 minutes or until chocolate is firm, or until ready to serve. Store covered in refrigerator so chocolate does not soften (if made with oil, chocolate will soften more quickly at room temperature).'],
+		greeting: function () {
+			console.log('Hello!');
+		},
+		prepare: function (food) {
+			console.log("I'm hungery! Let's cook..." + food);
+		}
+	};
+	recipe.greeting();
+	var title = recipe.recipeTitle;
+	//console.log('RECIPE ' + title);
+	recipe.prepare(title);
+
+	console.log('INGREDIENTS');
+	var item1 = recipe.servings[0] + ' ' + recipe.ingredients[0];
+
+	for (each in recipe.servings) {
+		console.log(recipe.servings[each] + " " + recipe.ingredients[each] + "\n");
+	}
+
+	console.log('STEPS');
+	for (var i = 0; i < recipe.directions.length; i++) {
+		var counter = i + 1;
+		var directions = recipe.directions[i];
+		console.log(counter + '. ' + directions);
+	}
 }
+myObject();
 
 //Example of printing an object 
-function myObject2(){
-	var txt="";
+function myObject2() {
+	var txt = "";
 	var nyc = {
-		fullName: ["New York City","USA"],
-		mayor: ["Michael Bloomberg","Meow"],
-		population: ["8000000","2000"],
-		boroughs: ["5","7"]
+		fullName: ["New York City", "USA"],
+		mayor: ["Michael Bloomberg", "Meow"],
+		population: ["8000000", "2000"],
+		boroughs: ["5", "7"]
 	};
-	
-	for (var x in nyc){
+
+	for (var x in nyc) {
 		txt += nyc[x];
 		console.log(nyc[x]);
 	}
